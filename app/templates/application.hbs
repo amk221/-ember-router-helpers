@@ -1,0 +1,22 @@
+<a
+  href="/foo"
+  type="button"
+  class={{if (is-active "foo") "active"}}
+  {{on "click" (transition-to "foo")}}
+>Foo</a>
+
+|
+
+<a
+  href="/bar"
+  class={{if (is-active "bar") "active"}}
+  {{on "click" (transition-to "bar")}}
+>Bar</a>
+
+<hr />
+
+<LinkTo @route="foo">Foo</LinkTo>
+
+|
+
+<LinkTo @route="bar">Bar</LinkTo>
